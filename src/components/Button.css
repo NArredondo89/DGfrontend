@@ -1,5 +1,5 @@
 :root {
-  ---primary: #fff;
+  --primary: #fff;
 }
 
 .btn {
@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 
-.btn-primary {
+.btn--primary {
   background-color: var(--primary);
   color: #242424;
   border: 1px solid var(--primary);
@@ -21,12 +21,12 @@
   color: #fff;
   padding: 8px 20px;
   border: 1px solid var(--primary);
-  transition: all 0.3 ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .btn--medium {
   padding: 8px 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .btn--large {
@@ -34,9 +34,10 @@
   font-size: 20px;
 }
 
-.btn--medium:hover,
-.btn--large:hover {
-  background-color: #fff;
+.btn--large:hover,
+.btn--medium:hover {
+  transition: all 0.3s ease-out;
+  background: #fff;
   color: #242424;
-  transition: all 0.3 ease-out;
+  transition: 250ms;
 }
