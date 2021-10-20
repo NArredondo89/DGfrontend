@@ -8,7 +8,7 @@ function HeroSection() {
     <div className="hero-container">
       <video src="/videos/video-1.mp4" autoPlay loop muted />
       <h1>CHABOT PARK</h1>
-      <p>Where The Wild Things Are</p>
+      <p>San Leandro, Ca</p>
       <div className="hero-btns">
         <Button
           className="btns"
