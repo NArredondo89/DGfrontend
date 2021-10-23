@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+.CourseSection {
+  /* display: flex; */
+  background-color: #fff;
+}
+.CourseInformation {
+  background-color: #fff;
+  padding: 4rem;
+}
+
+p {
+  text-align: center;
+  padding: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
