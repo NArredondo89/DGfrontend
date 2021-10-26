@@ -6,18 +6,18 @@ import Cards from '../Cards';
 
 import CourseModel from '../models/course';
 
-function Home(props) {
+function Home() {
   const [course, setCourse] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   useEffect(function () {
     fetchCourse();
   }, []);
 
-  const fetchCourse = (props) => {
+  const fetchCourse = () => {
     CourseModel.show().then((json) => {
-      console.log(json);
-      setCourse(json.course);
+      //NOTE; // THIS NEEDS TO BE CAPATILIZED INORDER TO PULL THE DATA
+      setCourse(json.Course[0]);
     });
   };
 

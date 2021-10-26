@@ -5,7 +5,7 @@ import GoogleMapsContainer from '../GoogleMapContainer';
 import LayoutModel from '../models/layout';
 
 function Layout() {
-  const [layout, setLayout] = useState([]);
+  const [layout, setLayout] = useState([{}]);
   // const [loading, setLoading] = useState(false);
 
   useEffect(function () {
@@ -15,12 +15,12 @@ function Layout() {
   const fetchLayout = (props) => {
     LayoutModel.show().then((json) => {
       console.log(json);
-      setLayout(json.layout);
+      setLayout(json.Layout);
     });
   };
   return (
     <>
-      <GoogleMapsContainer layout={layout} />
+      <GoogleMapsContainer layout={Layout} />
     </>
   );
 }

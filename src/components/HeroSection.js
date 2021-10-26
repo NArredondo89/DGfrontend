@@ -4,12 +4,11 @@ import { Button } from './Button';
 import './HeroSection.css';
 
 function HeroSection(props) {
-  console.log(props, 'HeroSection');
   return (
     <div className="hero-container">
       <video src="/videos/video-1.mp4" autoPlay loop muted />
-      <h1>CHABOT PARK</h1>
-      <p>San Leandro, Ca</p>
+      <h1>Chabot Park</h1>
+      <p>{props.course.location}</p>
       <div className="hero-btns">
         <Button
           className="btns"

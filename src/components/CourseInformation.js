@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CourseInformation.css';
 import ParkMap from '../FrontPageMap';
 
 const CourseInformation = (props) => {
-  console.log(props.course, ' course infomaton');
+  const [course, setCourse] = useState([{}]);
+
   return (
     <>
       <div className="CourseSection">
