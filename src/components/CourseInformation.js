@@ -1,15 +1,16 @@
 import React from 'react';
 import './CourseInformation.css';
+import ParkMap from '../FrontPageMap';
 
-function CourseInformation(props) {
-  console.log(props.Course, ' course infomaton');
+const CourseInformation = (props) => {
+  console.log(props.course, ' course infomaton');
   return (
     <>
       <div className="CourseSection">
         <div className="CourseInformation">
           <div className="row">
             <div className="column">
-              <h2>Course Information</h2>
+              <h2 className="mb-5">Information</h2>
               <p>Holes : 9</p>
               <p>Avaliability: Year Round 7am-7pm</p>
               <p>Tees : Dirt</p>
@@ -19,14 +20,14 @@ function CourseInformation(props) {
               <p>Established : 1988</p>
             </div>
             <div className="column">
-              <h2>Column 2</h2>
-              <p>Google Maps API IMAge.</p>
+              <h2 className="mb-3">Location</h2>
+              <ParkMap />
             </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
 export default CourseInformation;

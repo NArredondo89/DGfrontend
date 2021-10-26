@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
-const GoogleMapsContainer = () => {
+const ParkMap = () => {
   const apiKey = `AIzaSyAq2oNSYgmd8vY7t3wMOHV9fJM9CDOIDRk`;
 
   const { isLoaded } = useJsApiLoader({
@@ -10,7 +10,7 @@ const GoogleMapsContainer = () => {
   });
 
   const containerStyle = {
-    height: '80vh',
+    height: '45vh',
     width: '100%',
   };
 
@@ -22,7 +22,7 @@ const GoogleMapsContainer = () => {
   return (
     <div>
       {isLoaded ? (
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={18}>
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={12}>
           {/* Child components, such as markers, info windows, etc. */}
           <></>
         </GoogleMap>
@@ -33,4 +33,4 @@ const GoogleMapsContainer = () => {
   );
 };
 
-export default GoogleMapsContainer;
+export default ParkMap;

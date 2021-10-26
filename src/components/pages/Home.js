@@ -6,8 +6,9 @@ import Cards from '../Cards';
 
 import CourseModel from '../models/course';
 
-function Home() {
+function Home(props) {
   const [course, setCourse] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(function () {
     fetchCourse();
@@ -15,9 +16,14 @@ function Home() {
 
   const fetchCourse = (props) => {
     CourseModel.show().then((json) => {
+      console.log(json);
       setCourse(json.course);
     });
   };
+
+  // const chabotPark = course.map((singlecourse) => {
+  //   console.log(chabotPark, 'home.js');
+  // });
 
   return (
     <>

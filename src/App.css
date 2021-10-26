@@ -42,3 +42,8 @@
   color: #fff;
   font-size: 100px;
 }
+
+GoogleMap {
+  height: 45vh;
+  width: 45vh;
+}
