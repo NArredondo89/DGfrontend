@@ -1,7 +1,8 @@
 import React from 'react';
 import './CourseInformation.css';
 
-function CourseInformation() {
+function CourseInformation(props) {
+  console.log(props.Course, ' course infomaton');
   return (
     <>
       <div className="CourseSection">

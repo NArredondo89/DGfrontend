@@ -3,7 +3,8 @@ import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
 
-function HeroSection() {
+function HeroSection(props) {
+  console.log(props, 'HeroSection');
   return (
     <div className="hero-container">
       <video src="/videos/video-1.mp4" autoPlay loop muted />
@@ -21,7 +22,7 @@ function HeroSection() {
           className="btns"
           buttonStyle="btn--primary"
           buttonSize="btn--large"
-          onClick={console.log('hey')}
+          // onClick={console.log('hey')}
         >
           WATCH TRAILER <i className="far fa-play-circle" />
         </Button>
