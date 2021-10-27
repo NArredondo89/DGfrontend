@@ -11,10 +11,10 @@ class CourseModel {
     }).then((response) => response.json());
   }
 
-  static edit(id) {
-    return fetch(`${url}/${id}`, {
+  static edit(data) {
+    return fetch(`${url}/edit`, {
       method: 'GET',
-      body: JSON.stringify(id),
+      body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -22,7 +22,7 @@ class CourseModel {
   }
 
   static update(data) {
-    return fetch(`${url}/6143daa22ce098b8ce669083`, {
+    return fetch(`${url}/edit`, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {
