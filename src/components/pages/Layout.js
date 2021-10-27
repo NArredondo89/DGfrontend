@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../App.css';
 import GoogleMapsContainer from '../GoogleMapContainer';
+import LayoutContainer from '../layoutContainer';
 
 import LayoutModel from '../models/layout';
 
@@ -14,13 +15,14 @@ function Layout() {
 
   const fetchLayout = (props) => {
     LayoutModel.show().then((json) => {
-      console.log(json);
-      setLayout(json.Layout);
+      // console.log(json);
+      setLayout(json.layout[0]);
     });
   };
   return (
     <>
-      <GoogleMapsContainer layout={Layout} />
+      <GoogleMapsContainer layout={layout} />
+      <LayoutContainer layout={layout} />
     </>
   );
 }
