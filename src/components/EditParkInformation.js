@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 function EditParkInformation(props) {
   const [name, setName] = useState('');
   const [location, setLocation] = useState('');
-  const [availibility, setAvailibility] = useState('');
-  const [hole, setHole] = useState('');
+  const [availability, setAvailability] = useState('');
+  const [holes, setHoles] = useState('');
   const [tees, setTees] = useState('');
   const [targets, setTargets] = useState('');
   const [property, setProperty] = useState('');
@@ -13,7 +13,7 @@ function EditParkInformation(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setName(e.target.value);
+    console.log('Click');
   };
   return (
     <>
@@ -26,9 +26,10 @@ function EditParkInformation(props) {
             </label>
             <input
               type="text"
+              placeholder={props.course.name}
               className="form-control"
               id="parkName"
-              value={props.course.name}
+              value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
@@ -38,9 +39,10 @@ function EditParkInformation(props) {
             </label>
             <input
               type="text"
+              placeholder={props.course.location}
               className="form-control"
               id="ParkCity"
-              value={props.course.location}
+              value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
           </div>
@@ -51,10 +53,11 @@ function EditParkInformation(props) {
             </label>
             <input
               type="text"
+              placeholder={props.course.holes}
               className="form-control"
               id="courseHoles"
-              value={props.course.holes}
-              onChange={(e) => setHole(e.target.value)}
+              value={holes}
+              onChange={(e) => setHoles(e.target.value)}
             />
           </div>
 
@@ -66,8 +69,9 @@ function EditParkInformation(props) {
               type="text"
               className="form-control"
               id="availibility"
-              value={props.course.availability}
-              onChange={(e) => setAvailibility(e.target.value)}
+              placeholder={props.course.availability}
+              value={availability}
+              onChange={(e) => setAvailability(e.target.value)}
             />
           </div>
 
@@ -79,7 +83,8 @@ function EditParkInformation(props) {
               type="text"
               className="form-control"
               id="tees"
-              value={props.course.tees}
+              placeholder={props.course.tees}
+              value={tees}
               onChange={(e) => setTees(e.target.value)}
             />
           </div>
@@ -105,7 +110,8 @@ function EditParkInformation(props) {
               type="text"
               className="form-control"
               id="property"
-              value={props.course.property}
+              placeholder={props.course.property}
+              value={property}
               onChange={(e) => setProperty(e.target.value)}
             />
           </div>
@@ -118,7 +124,8 @@ function EditParkInformation(props) {
               type="text"
               className="form-control"
               id="services"
-              value={props.course.services}
+              placeholder={props.course.services}
+              value={services}
               onChange={(e) => setServices(e.target.value)}
             />
           </div>
@@ -129,10 +136,11 @@ function EditParkInformation(props) {
             </label>
             <input
               type="text"
+              placeholder={props.course.established}
               className="form-control"
               id="established"
+              value={established}
               onChange={(e) => setEstablished(e.target.value)}
-              value={props.course.established}
             />
           </div>
 

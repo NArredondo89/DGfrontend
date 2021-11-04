@@ -1,5 +1,7 @@
 import React from 'react';
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import './GoogleMapContainer.css';
 
 const GoogleMapsContainer = () => {
   const apiKey = `AIzaSyAq2oNSYgmd8vY7t3wMOHV9fJM9CDOIDRk`;
@@ -10,8 +12,8 @@ const GoogleMapsContainer = () => {
   });
 
   const containerStyle = {
-    height: '80vh',
-    width: '100%',
+    height: '70vh',
+    width: '70vw',
   };
 
   const center = {
@@ -20,16 +22,23 @@ const GoogleMapsContainer = () => {
   };
 
   return (
-    <div>
-      {isLoaded ? (
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={18}>
-          {/* Child components, such as markers, info windows, etc. */}
+    <>
+      <div className="mapContainer">
+        {isLoaded ? (
+          <GoogleMap
+            className="GoogleMap"
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={18}
+            // mapTypeId="hybrid"
+          >
+            {/*Hole information */}
+          </GoogleMap>
+        ) : (
           <></>
-        </GoogleMap>
-      ) : (
-        <></>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './CourseInformation.css';
 import ParkMap from '../FrontPageMap';
 
 const CourseInformation = (props) => {
   const [course, setCourse] = useState([{}]);
+  console.log(props.course, 'courseinformation');
 
   return (
     <>
@@ -20,9 +21,9 @@ const CourseInformation = (props) => {
               <p>Property : {props.course.property}</p>
               <p>Services : {props.course.services}</p>
               <p>Established : {props.course.established}</p>
-              <Link to="/edit">
+              <NavLink to="/6144b1380a8c8848f05cea47">
                 <button className="btn btn-secondary">Edit</button>
-              </Link>
+              </NavLink>
             </div>
 
             <div className="column">
