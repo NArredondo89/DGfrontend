@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Dropdown, Table } from 'react-bootstrap';
 
 const EditLayoutInformation = (props) => {
-  const [tite, setTite] = useState('');
+  const [title, setTitle] = useState('');
   const [totalFeet, setTotalFeet] = useState('');
   const [totalHoles, setTotalHoles] = useState('');
   const [totalPar, setTotalPar] = useState('');
@@ -34,11 +34,11 @@ const EditLayoutInformation = (props) => {
             </label>
             <input
               type="text"
-              placeholder={props.layout.tite}
+              placeholder={props.layout.title}
               className="form-control"
               id="parkName"
-              value={tite}
-              onChange={(e) => setTite(e.target.value)}
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
             />
           </div>
           <div className="col-md-6">

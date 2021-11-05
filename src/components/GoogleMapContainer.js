@@ -1,19 +1,17 @@
 import React from 'react';
-
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import './GoogleMapContainer.css';
 
-const GoogleMapsContainer = () => {
-  const apiKey = `apiKey`;
-
+const GoogleMapsContainer = (props) => {
+  console.log(props);
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: apiKey,
+    googleMapsApiKey: 'AIzaSyAq2oNSYgmd8vY7t3wMOHV9fJM9CDOIDRk',
   });
 
   const containerStyle = {
-    height: '70vh',
-    width: '70vw',
+    height: '80vh',
+    width: '50vw',
   };
 
   const center = {

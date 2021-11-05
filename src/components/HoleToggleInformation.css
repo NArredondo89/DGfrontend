@@ -1,9 +1,0 @@
-.navContainer {
-  display: flex;
-  justify-content: center;
-}
-#holeContent {
-  height: 80vh;
-  width: 75vw;
-  border: 1px solid black;
-}

@@ -17,11 +17,11 @@ const CourseInformation = (props) => {
               <p>Holes : {props.course.holes}</p>
               <p>Avaliability: {props.course.availability}</p>
               <p>Tees : {props.course.tees}</p>
-              <p>Targets : Shitty Baskets</p>
+              <p>Targets : {props.course.targets}</p>
               <p>Property : {props.course.property}</p>
               <p>Services : {props.course.services}</p>
               <p>Established : {props.course.established}</p>
-              <NavLink to="/6144b1380a8c8848f05cea47">
+              <NavLink to="/61855f2c12dc6d555ed78dca">
                 <button className="btn btn-secondary">Edit</button>
               </NavLink>
             </div>

@@ -4,15 +4,9 @@
   height: 100%;
 }
 
-/* Optional: Makes the sample page fill the window. */
-/* html,
-body {
-  height: 75%;
-  margin: 0;
-  padding: ;
-} */
-
 .mapContainer {
-  margin-top: 10vh;
-  margin-left: 20vw;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid black;
+  margin: 40px;
+  border-radius: 12px;
 }

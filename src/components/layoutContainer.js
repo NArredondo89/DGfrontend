@@ -1,85 +1,114 @@
-import React from 'react';
-import { Container, Table, Card, Button, CardGroup } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import './layoutContainer.css';
+import { Container, Table, Card, CardGroup, Stack, Row } from 'react-bootstrap';
 
 function LayoutContainer(props) {
-  console.log(props);
+  let frontNineNumber = props.hole.slice(0, 9).map((singlehole) => {
+    console.log(singlehole, 'show page table');
+    return (
+      <td>
+        <NavLink to={`/layout/${singlehole._id}`}>{singlehole.number}</NavLink>
+      </td>
+    );
+  });
+
+  let frontNineFeet = props.hole.slice(0, 9).map((singlehole) => {
+    return <td>{singlehole.feet}</td>;
+  });
+
+  let frontNinePar = props.hole.slice(0, 9).map((singlehole) => {
+    return <td>{singlehole.par}</td>;
+  });
+
+  let backNineNumber = props.hole.slice(9, 18).map((singlehole) => {
+    console.log(singlehole, 'show page table');
+    return (
+      <td>
+        <NavLink to={`/layout/${singlehole._id}`}>{singlehole.number}</NavLink>
+      </td>
+    );
+  });
+
+  let backNineFeet = props.hole.slice(9, 18).map((singlehole) => {
+    return <td>{singlehole.feet}</td>;
+  });
+
+  let backNinePar = props.hole.slice(9, 18).map((singlehole) => {
+    return <td>{singlehole.par}</td>;
+  });
+
   return (
     <>
-      <aside>
-        <h4 className="mt-5 ">{props.layout.tite}</h4>
-        <CardGroup className="m-5">
-          <Card>
-            <Card.Body>
-              <Card.Title className="text-center  ">Total Feet</Card.Title>
-              <Card.Text>{props.layout.totalFeet}</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card>
-            <Card.Body>
-              <Card.Title className="text-center">Total Holes</Card.Title>
-              <Card.Text>{props.layout.totalHoles}</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card>
-            <Card.Body>
-              <Card.Title className="text-center">Total Pars</Card.Title>
-              <Card.Text>{props.layout.totalPar}</Card.Text>
-            </Card.Body>
-          </Card>
-        </CardGroup>
-        {/* <h1 className="frontNine">Front Nine</h1> */}
-        <Table className="layoutTable " size="sm" responsive>
-          <thead>
-            <tr>
-              <th>Hole #</th>
-              {Array.from({ length: 9 }).map((_, index) => (
-                <th key={index}>Num</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Total Feet</td>
-              {Array.from({ length: 9 }).map((_, index) => (
-                <td key={index}>Feet </td>
-              ))}
-            </tr>
-            <tr>
-              <td>Total Par</td>
-              {Array.from({ length: 9 }).map((_, index) => (
-                <td key={index}>Par</td>
-              ))}
-            </tr>
-          </tbody>
-        </Table>
-        {/* <h1 className="frontNine">Back Nine</h1> */}
-        <Table className="layoutTable mt-5" size="sm" responsive>
-          <thead>
-            <tr>
-              <th>Hole #</th>
-              {Array.from({ length: 9 }).map((_, index) => (
-                <th key={index}>Num</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Total Feet</td>
-              {Array.from({ length: 9 }).map((_, index) => (
-                <td key={index}>Feet</td>
-              ))}
-            </tr>
-            <tr>
-              <td>Total Par</td>
-              {Array.from({ length: 9 }).map((_, index) => (
-                <td key={index}>Par</td>
-              ))}
-            </tr>
-          </tbody>
-        </Table>
-      </aside>
+      <Container className="layoutInformation">
+        <Row>
+          <div className="titleContainer">
+            <h2 className="layoutTitle">{props.layout.title}</h2>
+          </div>
+          <div className="totalcontainer">
+            <Stack direction="horizontal">
+              <CardGroup>
+                <Card border="light">
+                  <Card.Body>
+                    <Card.Title className="text-center"> Total Feet</Card.Title>
+                    <Card.Text>{props.layout.totalFeet}</Card.Text>
+                  </Card.Body>
+                </Card>
+                <Card border="light">
+                  <Card.Body>
+                    <Card.Title className="text-center">Total Holes</Card.Title>
+                    <Card.Text>{props.layout.totalHoles}</Card.Text>
+                  </Card.Body>
+                </Card>
+                <Card border="light">
+                  <Card.Body>
+                    <Card.Title className="text-center">Total Pars</Card.Title>
+                    <Card.Text>{props.layout.totalPar}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </CardGroup>
+            </Stack>
+          </div>
+          <Container>
+            <h1>Front Nine</h1>
+            <Table>
+              <thead>
+                <tr>
+                  <th>Number</th>
+                  {frontNineNumber}
+                </tr>
+                <tr>
+                  <th>Feet</th>
+                  {frontNineFeet}
+                </tr>
+                <tr>
+                  <th>Par</th>
+                  {frontNinePar}
+                </tr>
+              </thead>
+            </Table>
+            <h1>Back Nine</h1>
+            <Table>
+              <thead>
+                <tr>
+                  <th>Number</th>
+                  {backNineNumber}
+                </tr>
+                <tr>
+                  <th>Feet</th>
+                  {backNineFeet}
+                </tr>
+                <tr>
+                  <th>Par</th>
+                  {backNinePar}
+                </tr>
+              </thead>
+            </Table>
+          </Container>
+        </Row>
+      </Container>
     </>
   );
 }
 
-// export default LayoutContainer;
+export default LayoutContainer;
