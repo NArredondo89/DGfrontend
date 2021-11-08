@@ -47,7 +47,3 @@ GoogleMap {
   height: 45vh;
   width: 45vw;
 }
-
-.layoutHeroSection {
-  display: flex;
-}

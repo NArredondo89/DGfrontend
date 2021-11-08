@@ -3,7 +3,7 @@ import CourseModel from '../models/course';
 import LayoutModel from '../models/layout';
 import EditParkInformation from '../EditParkInformation';
 import EditLayoutInformation from '../EditLayoutInformation';
-import EditHoleInformation from '../EditHoleInformation';
+// import EditHoleInformation from '../EditHoleInformation';
 
 function EditHome() {
   const [course, setCourse] = useState([]);

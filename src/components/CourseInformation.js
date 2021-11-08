@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './CourseInformation.css';
 import ParkMap from '../FrontPageMap';
 
 const CourseInformation = (props) => {
-  const [course, setCourse] = useState([{}]);
-  console.log(props.course, 'courseinformation');
-
   return (
     <>
       <div className="CourseSection">

@@ -5,31 +5,36 @@ import CourseInformation from '../CourseInformation';
 import Cards from '../Cards';
 
 import CourseModel from '../models/course';
+import EventModel from '../models/event';
 
 function Home() {
   const [course, setCourse] = useState([]);
-  // const [loading, setLoading] = useState(false);
+  const [event, setEvent] = useState([]);
 
   useEffect(function () {
     fetchCourse();
+    fetchEvent();
   }, []);
 
   const fetchCourse = () => {
     CourseModel.show().then((json) => {
-      //NOTE; // THIS NEEDS TO BE CAPATILIZED INORDER TO PULL THE DATA
       setCourse(json.Course[0]);
     });
   };
 
-  // const chabotPark = course.map((singlecourse) => {
-  //   console.log(chabotPark, 'home.js');
-  // });
+  const fetchEvent = () => {
+    EventModel.show().then((json) => {
+      console.log(json, 'json event');
+      setEvent(json.Event);
+      console.log(json.Event, 'json event');
+    });
+  };
 
   return (
     <>
       <HeroSection course={course} />
       <CourseInformation course={course} />
-      <Cards course={course} />
+      <Cards event={Event} />
     </>
   );
 }

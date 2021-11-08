@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import '../../App.css';
 
 ////Containers//////
-import GoogleMapsContainer from '../GoogleMapContainer';
 import LayoutContainer from '../layoutContainer';
 import HoleContainer from '../HoleContainer';
 
@@ -17,7 +16,6 @@ function Layout() {
   useEffect(function () {
     fetchLayout();
     fetchHole();
-    console.log(hole, 'Use Effect');
   }, []);
 
   const fetchLayout = (props) => {
@@ -35,10 +33,7 @@ function Layout() {
   };
   return (
     <>
-      <div className="layoutHeroSection">
-        <LayoutContainer layout={layout} hole={hole} />
-        <GoogleMapsContainer />
-      </div>
+      <LayoutContainer layout={layout} hole={hole} />
       <HoleContainer hole={hole} />
     </>
   );

@@ -10,8 +10,8 @@ const GoogleMapsContainer = (props) => {
   });
 
   const containerStyle = {
-    height: '80vh',
-    width: '50vw',
+    height: '50vh',
+    width: 'auto',
   };
 
   const center = {

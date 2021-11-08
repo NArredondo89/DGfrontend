@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import GoogleMapsContainer from '../components/GoogleMapContainer';
+
 import './layoutContainer.css';
-import { Container, Table, Card, CardGroup, Stack, Row } from 'react-bootstrap';
+import { Container, Table, Col, Row } from 'react-bootstrap';
 
 function LayoutContainer(props) {
   let frontNineNumber = props.hole.slice(0, 9).map((singlehole) => {
@@ -40,71 +42,76 @@ function LayoutContainer(props) {
 
   return (
     <>
-      <Container className="layoutInformation">
+      <Container fluid className="layoutHero">
         <Row>
-          <div className="titleContainer">
-            <h2 className="layoutTitle">{props.layout.title}</h2>
-          </div>
-          <div className="totalcontainer">
-            <Stack direction="horizontal">
-              <CardGroup>
-                <Card border="light">
-                  <Card.Body>
-                    <Card.Title className="text-center"> Total Feet</Card.Title>
-                    <Card.Text>{props.layout.totalFeet}</Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card border="light">
-                  <Card.Body>
-                    <Card.Title className="text-center">Total Holes</Card.Title>
-                    <Card.Text>{props.layout.totalHoles}</Card.Text>
-                  </Card.Body>
-                </Card>
-                <Card border="light">
-                  <Card.Body>
-                    <Card.Title className="text-center">Total Pars</Card.Title>
-                    <Card.Text>{props.layout.totalPar}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </CardGroup>
-            </Stack>
-          </div>
-          <Container>
-            <h1>Front Nine</h1>
-            <Table>
-              <thead>
-                <tr>
-                  <th>Number</th>
-                  {frontNineNumber}
-                </tr>
-                <tr>
-                  <th>Feet</th>
-                  {frontNineFeet}
-                </tr>
-                <tr>
-                  <th>Par</th>
-                  {frontNinePar}
-                </tr>
-              </thead>
-            </Table>
-            <h1>Back Nine</h1>
-            <Table>
-              <thead>
-                <tr>
-                  <th>Number</th>
-                  {backNineNumber}
-                </tr>
-                <tr>
-                  <th>Feet</th>
-                  {backNineFeet}
-                </tr>
-                <tr>
-                  <th>Par</th>
-                  {backNinePar}
-                </tr>
-              </thead>
-            </Table>
-          </Container>
+          <Col className="layoutTotals" sm={6} md={6} lg={6} xl={6}>
+            <Container className="layoutInformation">
+              <Row>
+                <Col className="totalContainer">
+                  <Container>
+                    <Row className="titleWrapper">
+                      <Col>
+                        <h2 className="layoutTitle">{props.layout.title}</h2>
+                      </Col>
+                    </Row>
+                    <Row className="row">
+                      <Col className="totalWrapper">
+                        <div className="title">Total Holes</div>
+                        <div className="value">{props.layout.totalHoles}</div>
+                      </Col>
+                      <Col className="totalWrapper">
+                        <div className="title">Total Feet</div>
+                        <div className="value">{props.layout.totalFeet}</div>
+                      </Col>
+                      <Col className="totalWrapper">
+                        <div className="title">Total Par</div>
+                        <div className="value">{props.layout.totalPar}</div>
+                      </Col>
+                    </Row>
+                    <div className="tableContainer">
+                      <h1>Front Nine</h1>
+                      <Table className="holeTable mt-5" responsive="lg">
+                        <thead>
+                          <tr>
+                            <th>Number</th>
+                            {frontNineNumber}
+                          </tr>
+                          <tr>
+                            <th>Feet</th>
+                            {frontNineFeet}
+                          </tr>
+                          <tr>
+                            <th>Par</th>
+                            {frontNinePar}
+                          </tr>
+                        </thead>
+                      </Table>
+                      <h1>Back Nine</h1>
+                      <Table responsive="lg">
+                        <thead>
+                          <tr>
+                            <th>Number</th>
+                            {backNineNumber}
+                          </tr>
+                          <tr>
+                            <th>Feet</th>
+                            {backNineFeet}
+                          </tr>
+                          <tr>
+                            <th>Par</th>
+                            {backNinePar}
+                          </tr>
+                        </thead>
+                      </Table>
+                    </div>
+                  </Container>
+                </Col>
+              </Row>
+            </Container>
+          </Col>
+          <Col className="googleMapsContainer mt-5" sm={6} md={6} lg={6} xl={6}>
+            <GoogleMapsContainer />
+          </Col>
         </Row>
       </Container>
     </>

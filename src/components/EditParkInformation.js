@@ -97,7 +97,7 @@ function EditParkInformation(props) {
               type="text"
               className="form-control"
               id="targets"
-              value="Old baskets"
+              value={targets}
               onChange={(e) => setTargets(e.target.value)}
             />
           </div>

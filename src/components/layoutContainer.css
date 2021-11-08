@@ -1,33 +1,21 @@
+.layoutHero {
+  margin: 20px;
+  height: 80vh;
+  width: auto;
+}
+
 .layoutInformation {
-  display: flex;
-  max-width: 40vw;
+  flex-direction: row;
 }
 
-.titleContainer {
-  margin-top: 5vh;
-  position: relative;
+.layoutTotals {
+  margin: 50px 0 10px 0;
 }
 
-.layoutTitle {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0vh;
-  right: 0;
-  margin: auto;
-  height: 20px;
+.totalWrapper {
+  display: inline-block;
 }
 
-table {
-  max-width: 50vw;
-}
-
-.titleContainer {
-  display: flex;
-  justify-content: center;
-}
-
-.totalcontainer {
-  display: flex;
-  justify-content: center;
+.tableContainer {
+  margin-top: 50px;
 }
