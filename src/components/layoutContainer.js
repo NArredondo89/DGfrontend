@@ -1,8 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 import GoogleMapsContainer from '../components/GoogleMapContainer';
 
 import './layoutContainer.css';
+
 import { Container, Table, Col, Row } from 'react-bootstrap';
 
 function LayoutContainer(props) {
@@ -69,8 +71,8 @@ function LayoutContainer(props) {
                       </Col>
                     </Row>
                     <div className="tableContainer">
-                      <h1>Front Nine</h1>
-                      <Table className="holeTable mt-5" responsive="lg">
+                      <h4>Front Nine</h4>
+                      <Table className="holeTable" responsive="lg">
                         <thead>
                           <tr>
                             <th>Number</th>
@@ -86,7 +88,7 @@ function LayoutContainer(props) {
                           </tr>
                         </thead>
                       </Table>
-                      <h1>Back Nine</h1>
+                      <h4>Back Nine</h4>
                       <Table responsive="lg">
                         <thead>
                           <tr>
@@ -109,7 +111,7 @@ function LayoutContainer(props) {
               </Row>
             </Container>
           </Col>
-          <Col className="googleMapsContainer mt-5" sm={6} md={6} lg={6} xl={6}>
+          <Col>
             <GoogleMapsContainer />
           </Col>
         </Row>

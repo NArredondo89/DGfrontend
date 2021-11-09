@@ -1,21 +1,25 @@
 .layoutHero {
   margin: 20px;
-  height: 80vh;
+  height: 100vh;
   width: auto;
 }
 
-.layoutInformation {
-  flex-direction: row;
+.layoutTotals {
+  margin: 15vh 0 10px 0;
+  justify-content: center;
 }
 
-.layoutTotals {
-  margin: 50px 0 10px 0;
+h4 {
+  margin-top: 6vh;
+}
+.row {
+  text-align: center;
 }
 
 .totalWrapper {
-  display: inline-block;
+  margin-top: 3vh;
 }
 
 .tableContainer {
-  margin-top: 50px;
+  margin-top: 10vh;
 }

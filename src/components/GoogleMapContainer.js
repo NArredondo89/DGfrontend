@@ -10,7 +10,7 @@ const GoogleMapsContainer = (props) => {
   });
 
   const containerStyle = {
-    height: '50vh',
+    height: '90vh',
     width: 'auto',
   };
 
@@ -24,7 +24,7 @@ const GoogleMapsContainer = (props) => {
       <div className="mapContainer">
         {isLoaded ? (
           <GoogleMap
-            className="GoogleMap"
+            id="GoogleMap"
             mapContainerStyle={containerStyle}
             center={center}
             zoom={18}

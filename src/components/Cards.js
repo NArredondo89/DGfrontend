@@ -1,6 +1,6 @@
 import React from 'react';
-import './Cards.css';
 import CardItem from './CardItem';
+import './Cards.css';
 
 function Cards(props) {
   return (
@@ -28,7 +28,7 @@ function Cards(props) {
             <CardItem
               src="images/dg2.jpg"
               title="Monday Night Singles"
-              text="Test your ability in this Raw scoring round! "
+              text="Text your ability in this Raw scoreing round! "
               label="Raw Scores"
               path="/products"
             />
