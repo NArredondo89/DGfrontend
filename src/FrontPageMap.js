@@ -1,6 +1,8 @@
 import React from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
+import './FrontPageMap.css';
+
 const ParkMap = () => {
   const apiKey = `AIzaSyAq2oNSYgmd8vY7t3wMOHV9fJM9CDOIDRk`;
 
@@ -10,7 +12,7 @@ const ParkMap = () => {
   });
 
   const containerStyle = {
-    height: '45vh',
+    height: '60vh',
     width: '100%',
   };
 
@@ -24,7 +26,12 @@ const ParkMap = () => {
   return (
     <div>
       {isLoaded ? (
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={12}>
+        <GoogleMap
+          id="Google"
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={12}
+        >
           <Marker position={position} />
           <></>
         </GoogleMap>

@@ -11,7 +11,7 @@ import HoleModel from '../models/hole';
 
 function Layout() {
   const [layout, setLayout] = useState([{}]);
-  const [hole, setHole] = useState([{}]);
+  const [hole, setHole] = useState([]);
 
   useEffect(function () {
     fetchLayout();
@@ -34,7 +34,7 @@ function Layout() {
   return (
     <>
       <LayoutContainer layout={layout} hole={hole} />
-      <HoleContainer hole={hole} />
+      <HoleContainer layout={layout} hole={hole} />
     </>
   );
 }

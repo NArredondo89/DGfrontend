@@ -9,7 +9,6 @@ import { Container, Table, Col, Row } from 'react-bootstrap';
 
 function LayoutContainer(props) {
   let frontNineNumber = props.hole.slice(0, 9).map((singlehole) => {
-    console.log(singlehole, 'show page table');
     return (
       <td>
         <NavLink to={`/layout/${singlehole._id}`}>{singlehole.number}</NavLink>
@@ -26,7 +25,6 @@ function LayoutContainer(props) {
   });
 
   let backNineNumber = props.hole.slice(9, 18).map((singlehole) => {
-    console.log(singlehole, 'show page table');
     return (
       <td>
         <NavLink to={`/layout/${singlehole._id}`}>{singlehole.number}</NavLink>

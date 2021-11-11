@@ -1,15 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, setState } from 'react';
 import { Dropdown, Table } from 'react-bootstrap';
 
-const EditLayoutInformation = (props) => {
-  const [title, setTitle] = useState('');
-  const [totalFeet, setTotalFeet] = useState('');
-  const [totalHoles, setTotalHoles] = useState('');
-  const [totalPar, setTotalPar] = useState('');
+import LayoutModel from './models/layout';
 
-  const submitHandler = (e) => {
+const EditLayoutInformation = (props) => {
+  const layout = props.layout;
+
+  const [title, setTitle] = useState(layout.title);
+  const [totalFeet, setTotalFeet] = useState(layout.totalFeet);
+  const [totalHoles, setTotalHoles] = useState(layout.totalHoles);
+  const [totalPar, setTotalPar] = useState(layout.totalPar);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Click');
+
+    LayoutModel.update(props.layout._id, {
+      title,
+      totalFeet,
+      totalHoles,
+      totalPar,
+    }).then((json) => {
+      if (json.status === 500) {
+        console.log('still not right');
+      }
+      if (json.status === 200) {
+        console.log(json);
+      }
+    });
   };
 
   return (
@@ -27,16 +44,16 @@ const EditLayoutInformation = (props) => {
           </Dropdown.Menu>
         </Dropdown>
 
-        <form onSubmit={submitHandler} className="row g-3">
+        <form onSubmit={handleSubmit} className="row g-3">
           <div className="col-md-6">
             <label for="parkName" className="parkName">
               Layout Title
             </label>
             <input
               type="text"
-              placeholder={props.layout.title}
               className="form-control"
               id="parkName"
+              placeholder={props.layout.title}
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
@@ -83,7 +100,7 @@ const EditLayoutInformation = (props) => {
             />
           </div>
 
-          <h1 className="frontNine">Front Nine</h1>
+          {/* <h1 className="frontNine">Front Nine</h1>
           <Table className="layoutTable " size="sm" responsive>
             <thead>
               <tr>
@@ -134,10 +151,10 @@ const EditLayoutInformation = (props) => {
             </tbody>
           </Table>
           <div className="col-12">
-            <button type="submit" className="btn btn-primary">
-              Update Layout Information
-            </button>
-          </div>
+        </div> */}
+          <button type="submit" className="btn btn-primary">
+            Update Layout Information
+          </button>
         </form>
       </div>
     </>

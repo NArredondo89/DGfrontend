@@ -3,9 +3,11 @@ import CardItem from './CardItem';
 import './Cards.css';
 
 function Cards(props) {
+  console.log(props, 'Cards');
+
   return (
     <div className="cards">
-      <h1>Events And Announcements</h1>
+      <div className="event__title">Events And Announcements</div>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">

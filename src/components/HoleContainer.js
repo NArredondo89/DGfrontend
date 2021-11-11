@@ -1,9 +1,22 @@
 import React from 'react';
-import { Col, Row, Container, Button } from 'react-bootstrap';
+import { Col, Row, Container } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import './holeContainer.css';
+
+import HoleModel from './models/hole';
 
 function HoleContainer(props) {
   console.log(props.hole, 'Hole Container');
+
+  HoleModel.show(props.hole._id).then((json) => {
+    if (json.status === 500) {
+      console.log('still not right');
+    }
+    if (json.status === 200) {
+      console.log(json);
+    }
+  });
+
   return (
     <>
       <Container fluid className="holeContainer">
@@ -14,7 +27,7 @@ function HoleContainer(props) {
             </div>
           </Col>
           <Col className="informationContainer" sm={5}>
-            <div className="holeTitle">Hole 1</div>
+            <div className="holeTitle">{props.layout.number}</div>
             <div className="holeInformation">
               <div className="par">Par: 3</div>
               <div className="feet">Feet : 225</div>
@@ -42,6 +55,10 @@ function HoleContainer(props) {
             <Button variant="primary">Hole Video</Button>{' '}
             <Button variant="primary">ForeHand Throw</Button>{' '}
             <Button variant="primary">BackHand Throw</Button>{' '}
+            <div>
+              <Button variant="outline-primary">Previous Hole</Button>{' '}
+              <Button variant="outline-primary">Next Hole</Button>{' '}
+            </div>
           </Col>
         </Row>
       </Container>

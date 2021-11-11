@@ -3,22 +3,32 @@
 }
 
 .CourseSection {
-  /* display: flex; */
+  padding: 10vh 0vw 8vh 0vw;
   background-color: #fff;
 }
 .CourseInformation {
   background-color: #fff;
   padding: 4rem;
+  height: 75vh;
+  align-items: baseline;
 }
 
 p {
   text-align: center;
   padding: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
   text-align: center;
 }
+
+.infoTitle {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;

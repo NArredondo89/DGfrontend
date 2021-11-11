@@ -24,9 +24,7 @@ function Home() {
 
   const fetchEvent = () => {
     EventModel.show().then((json) => {
-      console.log(json, 'json event');
       setEvent(json.Event);
-      console.log(json.Event, 'json event');
     });
   };
 
@@ -34,7 +32,7 @@ function Home() {
     <>
       <HeroSection course={course} />
       <CourseInformation course={course} />
-      <Cards event={Event} />
+      <Cards event={event} />
     </>
   );
 }

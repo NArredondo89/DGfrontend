@@ -9,7 +9,7 @@ class HoleModel {
     return fetch(`${url}/${id}`).then((response) => response.json());
   }
 
-  static edit(data, id) {
+  static edit(id, data) {
     return fetch(`${url}/${id}`, {
       method: 'GET',
       body: JSON.stringify(data),
@@ -19,7 +19,7 @@ class HoleModel {
     }).then((response) => response.json());
   }
 
-  static update(data, id) {
+  static update(id, data) {
     return fetch(`${url}/${id}`, {
       method: 'PUT',
       body: JSON.stringify(data),

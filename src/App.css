@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .home,
@@ -20,7 +20,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: rgb(190, 167, 167);
   font-size: 100px;
 }
 
