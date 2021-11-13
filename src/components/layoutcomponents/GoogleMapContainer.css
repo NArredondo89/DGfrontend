@@ -2,5 +2,10 @@
   * element that contains the map. */
 
 #GoogleMap {
-  height: 90vh;
+  height: 75vh;
+  border-radius: 10px;
+}
+.google__maps__container {
+  display: grid;
+  align-items: center;
 }

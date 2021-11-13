@@ -1,0 +1,36 @@
+* {
+  border: 1px solid black;
+}
+
+.hole__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.hole__information__container {
+  margin: 100px 0 0 0;
+  padding: 20px;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+}
+
+.hole__number__container {
+  display: grid;
+  height: 10vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.hole__number {
+  height: 100%;
+}
+.hole__spec__container {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

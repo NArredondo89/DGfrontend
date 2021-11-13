@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import HoleModel from '../models/hole';
-
 import GoogleMapsContainer from '../layoutcomponents/GoogleMapContainer';
 
 import './layoutContainer.css';

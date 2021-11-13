@@ -5,6 +5,7 @@ import '../../App.css';
 
 import LayoutHero from '../layoutcomponents/layoutHero';
 import HoleContainer from '../layoutcomponents/HoleContainer';
+import HoleDataSection from '../layoutcomponents/HoleData';
 
 /////Models//////
 import LayoutModel from '../models/layout';
@@ -35,6 +36,7 @@ function Layout() {
   return (
     <>
       <LayoutHero layout={layout} hole={hole} />
+      <HoleDataSection />
       <HoleContainer layout={layout} hole={(hole._id, hole)} />
     </>
   );

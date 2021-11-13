@@ -20,19 +20,21 @@ const GoogleMapsContainer = () => {
 
   return (
     <>
-      {isLoaded ? (
-        <GoogleMap
-          id="GoogleMap"
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={18}
-          mapTypeId="hybrid"
-        >
-          {/*Hole information */}
-        </GoogleMap>
-      ) : (
-        <></>
-      )}
+      <div className="google__maps__container">
+        {isLoaded ? (
+          <GoogleMap
+            id="GoogleMap"
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={18}
+            mapTypeId="hybrid"
+          >
+            {/*Hole information */}
+          </GoogleMap>
+        ) : (
+          <></>
+        )}
+      </div>
     </>
   );
 };

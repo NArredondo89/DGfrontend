@@ -3,7 +3,7 @@
 }
 
 .CourseSection {
-  padding: 10vh 0vw 8vh 0vw;
+  padding: 10vh 0vw 8vh 5vw;
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -43,19 +43,17 @@ h2 {
 }
 
 /* Clear floats after the columns */
-.row:after {
-  content: '';
-  display: table;
-  clear: both;
-}
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1020px) {
   .CourseSection {
+    padding: 10vh 0vw 8vh 0vw;
+    background-color: #fff;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 'section', 'main';
+    grid-template-areas: 'main', 'section';
   }
-  .course__map {
-    margin-bottom: 100px;
+  .CourseInformation {
+    display: flex;
+    margin-top: 10vh;
   }
 }
