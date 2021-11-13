@@ -1,0 +1,137 @@
+.layout__container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.layout__information__container {
+  display: grid;
+  grid-template-columns: 75%;
+  justify-content: center;
+  height: 75%;
+}
+
+.layout__title {
+  display: grid;
+  width: 100%;
+  align-items: end;
+  font-size: 2rem;
+  margin: 10vh 0 3vh 0;
+  text-align: center;
+}
+
+.layout__total__container {
+  margin: 0px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.hole__table__wrapper {
+  margin-top: 4vh;
+}
+
+.row__title {
+  padding: 0 10px;
+}
+
+.first__nine__wrapper,
+.second__nine__wrapper {
+  display: flex;
+  width: 20vw;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}
+
+.table__front__nine {
+  margin: 20px;
+  padding: 20px;
+}
+
+td {
+  padding: 10px;
+}
+
+@media screen and (max-width: 1300px) {
+  td {
+    padding: 5px;
+  }
+  .layout__information__container {
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  td {
+    padding: 2px;
+  }
+  .layout__information__container {
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    height: 75%;
+  }
+  .hole__table__wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  td {
+    padding: 2px;
+  }
+  .layout__information__container {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    height: 75%;
+  }
+  .hole__table__wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .layout__container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .hole__table__wrapper {
+    display: grid;
+    margin-right: 35vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .layout__container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .hole__table__wrapper {
+    display: grid;
+    margin-right: 50vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .layout__container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .hole__table__wrapper {
+    display: grid;
+    margin-right: 69vw;
+  }
+}

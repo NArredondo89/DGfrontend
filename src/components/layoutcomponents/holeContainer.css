@@ -1,11 +1,11 @@
-img {
-  height: 100vh;
-  width: 50vw;
-  border-radius: 30px;
+.pictureContainer {
+  align-self: center;
 }
 
-.informationContainer {
-  margin-top: 3vh;
+img {
+  width: 100%;
+  height: auto;
+  align-self: center;
 }
 
 .holeTitle {
@@ -13,9 +13,7 @@ img {
 }
 
 .holeInformation {
-  display: flex;
   margin: 4vh 5vw;
-  justify-content: space-between;
 }
 
 .par {

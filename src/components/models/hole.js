@@ -6,7 +6,7 @@ class HoleModel {
   }
 
   static show(id) {
-    return fetch(`${url}/${id}`).then((response) => response.json());
+    return fetch(`${url}/layout/${id}`).then((response) => response.json());
   }
 
   static edit(id, data) {

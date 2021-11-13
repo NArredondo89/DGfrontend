@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../../App.css';
-import HeroSection from '../HeroSection';
-import CourseInformation from '../CourseInformation';
-import Cards from '../Cards';
+import HeroSection from '../homecomponents/HeroSection';
+import CourseInformation from '../homecomponents/CourseInformation';
+import Cards from '../homecomponents/Cards';
 
 import CourseModel from '../models/course';
 import EventModel from '../models/event';

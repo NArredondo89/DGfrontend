@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../../App.css';
 
 ////Containers//////
-import LayoutContainer from '../layoutContainer';
-import HoleContainer from '../HoleContainer';
+
+import LayoutHero from '../layoutcomponents/layoutHero';
+import HoleContainer from '../layoutcomponents/HoleContainer';
 
 /////Models//////
 import LayoutModel from '../models/layout';
@@ -33,8 +34,8 @@ function Layout() {
   };
   return (
     <>
-      <LayoutContainer layout={layout} hole={hole} />
-      <HoleContainer layout={layout} hole={hole} />
+      <LayoutHero layout={layout} hole={hole} />
+      <HoleContainer layout={layout} hole={(hole._id, hole)} />
     </>
   );
 }

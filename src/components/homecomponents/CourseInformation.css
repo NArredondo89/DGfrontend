@@ -5,12 +5,24 @@
 .CourseSection {
   padding: 10vh 0vw 8vh 0vw;
   background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas: 'section' 'main';
 }
 .CourseInformation {
   background-color: #fff;
-  padding: 4rem;
-  height: 75vh;
-  align-items: baseline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  grid-area: section;
+}
+
+main {
+  grid-area: main;
 }
 
 p {
@@ -27,15 +39,7 @@ h2 {
   font-size: 2rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-}
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px;
-  margin-bottom: 15vh; /* Should be removed. Only for demonstration */
+  text-align: center;
 }
 
 /* Clear floats after the columns */
@@ -45,8 +49,13 @@ h2 {
   clear: both;
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
+@media screen and (max-width: 1000px) {
+  .CourseSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'section', 'main';
+  }
+  .course__map {
+    margin-bottom: 100px;
   }
 }

@@ -1,36 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Col, Row, Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import './holeContainer.css';
 
-import HoleModel from './models/hole';
-
 function HoleContainer(props) {
-  console.log(props.hole, 'Hole Container');
-
-  HoleModel.show(props.hole._id).then((json) => {
-    if (json.status === 500) {
-      console.log('still not right');
-    }
-    if (json.status === 200) {
-      console.log(json);
-    }
-  });
-
   return (
     <>
-      <Container fluid className="holeContainer">
+      <Container fluid>
         <Row>
-          <Col className="pictureContainer" sm={7}>
+          <Col className="pictureContainer" md={6} lg={6} xl={6}>
             <div className="holeimage">
-              <img src="images/one.jpg" alt="" />
+              <img src="images/one.jpg" />
             </div>
           </Col>
-          <Col className="informationContainer" sm={5}>
-            <div className="holeTitle">{props.layout.number}</div>
+          <Col className="informationContainer" md={6} lg={6} xl={6}>
+            <div className="holeTitle">
+              {props.hole._id}
+              {props.hole.number}
+            </div>
             <div className="holeInformation">
-              <div className="par">Par: 3</div>
-              <div className="feet">Feet : 225</div>
+              <div className="par">{props.hole.number}</div>
+              <div className="feet">{props.hole.feet}</div>
             </div>
             <div className="penality">
               <div className="mandoTitle">Mandatory:</div>
