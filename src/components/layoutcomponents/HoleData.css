@@ -9,23 +9,23 @@
 }
 
 .hole__information__container {
-  margin: 100px 0 0 0;
+  margin: 15vh 0 0 0;
   padding: 20px;
   border: 1px solid black;
   justify-content: center;
   align-items: center;
-  height: 30%;
+  height: 80%;
 }
 
 .hole__number__container {
   display: grid;
-  height: 10vh;
+
   justify-content: center;
   text-align: center;
 }
 
 .hole__number {
-  height: 100%;
+  vertical-align: middle;
 }
 .hole__spec__container {
   margin: 20px;
@@ -33,4 +33,88 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.rules__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 40vh;
+}
+
+.out__of__bounds__container {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.out__of__bounds__value {
+  height: 75%;
+}
+
+.mandatory__container {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.dropzone__container {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.video__buttons__container {
+  height: 10vh;
+  display: grid;
+  gap: 1em;
+  padding: 0 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+
+  align-items: center;
+}
+
+.control__control__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0vh 10vw;
+  gap: 1.5em;
+}
+
+.video {
+  border-radius: 8px;
+  height: 3vh;
+  width: 10vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.hole_photo__container {
+  margin: 100px 0 0 0;
+  padding: 20px;
+  display: grid;
+  border: 1 px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo__container {
+  display: grid;
+  height: 55vh;
+  width: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+  .hole__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
 }

@@ -7,7 +7,6 @@
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   grid-template-areas: 'section' 'main';
 }
 .CourseInformation {

@@ -4,7 +4,7 @@ import '../../App.css';
 ////Containers//////
 
 import LayoutHero from '../layoutcomponents/layoutHero';
-import HoleContainer from '../layoutcomponents/HoleContainer';
+// import HoleContainer from '../layoutcomponents/HoleContainer';
 import HoleDataSection from '../layoutcomponents/HoleData';
 
 /////Models//////
@@ -22,22 +22,20 @@ function Layout() {
 
   const fetchLayout = (props) => {
     LayoutModel.show().then((res) => {
-      // console.log(res);
       setLayout(res.layout[0]);
     });
   };
 
   const fetchHole = () => {
     HoleModel.all().then((res) => {
-      // console.log(res)
       setHole(res.hole);
     });
   };
   return (
     <>
       <LayoutHero layout={layout} hole={hole} />
-      <HoleDataSection />
-      <HoleContainer layout={layout} hole={(hole._id, hole)} />
+      <HoleDataSection hole={hole} />
+      {/* <HoleContainer layout={layout} hole={(hole._id, hole)} /> */}
     </>
   );
 }

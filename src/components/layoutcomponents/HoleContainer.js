@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Col, Row, Container } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
+import React from 'react';
+import { Col, Row, Container, Button } from 'react-bootstrap';
+
 import './holeContainer.css';
 
 function HoleContainer(props) {

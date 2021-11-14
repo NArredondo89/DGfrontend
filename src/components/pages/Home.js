@@ -3,6 +3,7 @@ import '../../App.css';
 import HeroSection from '../homecomponents/HeroSection';
 import CourseInformation from '../homecomponents/CourseInformation';
 import Cards from '../homecomponents/Cards';
+import PlayDate from '../homecomponents/PlayDate';
 
 import CourseModel from '../models/course';
 import EventModel from '../models/event';
@@ -33,6 +34,7 @@ function Home() {
       <HeroSection course={course} />
       <CourseInformation course={course} />
       <Cards event={event} />
+      <PlayDate />
     </>
   );
 }
