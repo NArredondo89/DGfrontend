@@ -9,56 +9,53 @@
 }
 
 .hole__information__container {
-  margin: 15vh 0 0 0;
+  margin: 10vh 0 0 0;
   padding: 20px;
-  border: 1px solid black;
   justify-content: center;
   align-items: center;
-  height: 80%;
+  height: 90%;
 }
 
 .hole__number__container {
   display: grid;
-
   justify-content: center;
   text-align: center;
 }
 
 .hole__number {
   vertical-align: middle;
+  font-size: 5vw;
 }
+
 .hole__spec__container {
-  margin: 20px;
   padding: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
   align-items: center;
+}
+
+.out__of__bounds__title {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 1.5vw;
+  font-weight: 600px;
+}
+.value {
+  text-align: center;
 }
 
 .rules__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  text-align: center;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   height: 40vh;
-}
-
-.out__of__bounds__container {
-  grid-column-start: 1;
-  grid-column-end: 5;
-}
-
-.out__of__bounds__value {
-  height: 75%;
-}
-
-.mandatory__container {
-  grid-column-start: 2;
-  grid-column-end: 5;
-}
-
-.dropzone__container {
-  grid-column-start: 1;
-  grid-column-end: 5;
+  justify-content: center;
 }
 
 .video__buttons__container {

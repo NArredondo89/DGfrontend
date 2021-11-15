@@ -13,34 +13,34 @@ function LayoutContainer(props) {
 
   let frontNineNumber = props.hole.slice(0, 9).map((singlehole) => {
     return (
-      <td>
+      <td key={singlehole._id}>
         <NavLink to={`/layout/${singlehole._id}`}>{singlehole.number}</NavLink>
       </td>
     );
   });
 
   let frontNineFeet = props.hole.slice(0, 9).map((singlehole) => {
-    return <td>{singlehole.feet}</td>;
+    return <td key={singlehole._id}>{singlehole.feet}</td>;
   });
 
   let frontNinePar = props.hole.slice(0, 9).map((singlehole) => {
-    return <td>{singlehole.par}</td>;
+    return <td key={singlehole._id}>{singlehole.par}</td>;
   });
 
   let backNineNumber = props.hole.slice(9, 18).map((singlehole) => {
     return (
-      <td>
+      <td key={singlehole._id}>
         <NavLink to={`/layout/${singlehole._id}`}>{singlehole.number}</NavLink>
       </td>
     );
   });
 
   let backNineFeet = props.hole.slice(9, 18).map((singlehole) => {
-    return <td>{singlehole.feet}</td>;
+    return <td key={singlehole._id}>{singlehole.feet}</td>;
   });
 
   let backNinePar = props.hole.slice(9, 18).map((singlehole) => {
-    return <td>{singlehole.par}</td>;
+    return <td key={singlehole._id}>{singlehole.par}</td>;
   });
 
   return (

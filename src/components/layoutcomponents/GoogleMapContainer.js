@@ -8,11 +8,6 @@ const GoogleMapsContainer = () => {
     googleMapsApiKey: 'AIzaSyAq2oNSYgmd8vY7t3wMOHV9fJM9CDOIDRk',
   });
 
-  const containerStyle = {
-    width: '100%',
-    height: '.75fr',
-  };
-
   const center = {
     lat: 37.7314,
     lng: -122.1263,
@@ -24,7 +19,6 @@ const GoogleMapsContainer = () => {
         {isLoaded ? (
           <GoogleMap
             id="GoogleMap"
-            mapContainerStyle={containerStyle}
             center={center}
             zoom={18}
             mapTypeId="hybrid"

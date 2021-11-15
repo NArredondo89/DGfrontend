@@ -5,62 +5,78 @@ import GoogleMapsContainer from '../layoutcomponents/GoogleMapContainer';
 
 import './layoutHero.css';
 
-function LayoutHero(props) {
-  let frontNineNumber = props.hole.slice(0, 9).map((singlehole) => {
+function LayoutHero({ layout, hole, onSpecificHoleClick }) {
+  let frontNineNumber = hole.slice(0, 9).map((singlehole) => {
     return (
-      <td className="table__data">
-        <NavLink to={`/layout/${singlehole._id}`}>{singlehole.number}</NavLink>
+      <td
+        onClick={() => onSpecificHoleClick(singlehole)}
+        className="table__data"
+        key={singlehole._id}
+      >
+        {singlehole.number}
       </td>
     );
   });
 
-  let frontNineFeet = props.hole.slice(0, 9).map((singlehole) => {
-    return <td className="table__data">{singlehole.feet}</td>;
-  });
-
-  let frontNinePar = props.hole.slice(0, 9).map((singlehole) => {
-    return <td className="table__data">{singlehole.par}</td>;
-  });
-
-  let backNineNumber = props.hole.slice(9, 18).map((singlehole) => {
+  let frontNineFeet = hole.slice(0, 9).map((singlehole) => {
     return (
-      <td>
-        <NavLink to={`/layout/${singlehole._id}`}>{singlehole.number}</NavLink>
+      <td key={singlehole._id} className="table__data">
+        {singlehole.feet}
       </td>
     );
   });
 
-  let backNineFeet = props.hole.slice(9, 18).map((singlehole) => {
-    return <td>{singlehole.feet}</td>;
+  let frontNinePar = hole.slice(0, 9).map((singlehole) => {
+    return (
+      <td key={singlehole._id} className="table__data">
+        {singlehole.par}
+      </td>
+    );
   });
 
-  let backNinePar = props.hole.slice(9, 18).map((singlehole) => {
-    return <td>{singlehole.par}</td>;
+  let backNineNumber = hole.slice(9, 18).map((singlehole) => {
+    return (
+      <td
+        onClick={() => onSpecificHoleClick(singlehole)}
+        className="table__data"
+        key={singlehole._id}
+      >
+        {singlehole.number}
+      </td>
+    );
+  });
+
+  let backNineFeet = hole.slice(9, 18).map((singlehole) => {
+    return <td key={singlehole._id}>{singlehole.feet}</td>;
+  });
+
+  let backNinePar = hole.slice(9, 18).map((singlehole) => {
+    return <td key={singlehole._id}>{singlehole.par}</td>;
   });
 
   return (
     <>
       <div className="layout__container">
         <div className="layout__information__container">
-          <div className="layout__title">{props.layout.title}</div>
+          <div className="layout__title">{layout.title}</div>
           <div className="layout__total__container">
             <div className="totals">
               <div className="title">Total Holes</div>
-              <div className="value">{props.layout.totalHoles}</div>
+              <div className="value">{layout.totalHoles}</div>
             </div>
             <div className="totals">
               <div className="title">Total Feet</div>
-              <div className="value">{props.layout.totalFeet}</div>
+              <div className="value">{layout.totalFeet}</div>
             </div>
             <div className="totals">
               <div className="title">Total Par</div>
-              <div className="value">{props.layout.totalPar}</div>
+              <div className="value">{layout.totalPar}</div>
             </div>
           </div>
           <div className="hole__table__wrapper">
             <h3>Front Nine</h3>
             <div className="first__nine__wrapper">
-              {props.layout.hole ? (
+              {layout.hole ? (
                 <table className="table__front__nine">
                   <tr className="row__number">
                     <th className="row__title">Number</th>
@@ -81,7 +97,7 @@ function LayoutHero(props) {
             </div>
             <h3>Back Nine</h3>
             <div className="second__nine__wrapper">
-              {props.layout.hole ? (
+              {layout.hole ? (
                 <table className="table__front__nine">
                   <tr className="row__number">
                     <th className="row__title">Number</th>

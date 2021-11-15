@@ -4,6 +4,8 @@
 #GoogleMap {
   height: 75vh;
   border-radius: 10px;
+  width: 100%;
+  height: 0.75fr;
 }
 .google__maps__container {
   display: grid;
