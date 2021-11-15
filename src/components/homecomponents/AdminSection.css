@@ -1,0 +1,67 @@
+.admin__title__container {
+  background: #fff;
+  display: grid;
+  text-align: center;
+}
+
+.title__wrapper {
+  padding: 3vw;
+  height: 100% - 3vw;
+}
+
+.admin__page__container {
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: #fff;
+}
+
+.admin__container {
+  margin: 3vw;
+  padding: 1vw;
+}
+
+.content__container {
+  display: grid;
+}
+
+.content__name__container {
+  display: grid;
+  padding: 10px;
+}
+
+.admin__photo__container {
+  display: grid;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture__container {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.admin__photo {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+
+.admin__name {
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.content__about__container {
+  width: 100%;
+  padding: 2vw;
+  text-align: center;
+}

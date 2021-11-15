@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../../App.css';
 import HeroSection from '../homecomponents/HeroSection';
 import CourseInformation from '../homecomponents/CourseInformation';
+import AdminSection from '../homecomponents/AdminSection';
 import Cards from '../homecomponents/Cards';
 import PlayDate from '../homecomponents/PlayDate';
 
@@ -33,6 +34,7 @@ function Home() {
     <>
       <HeroSection course={course} />
       <CourseInformation course={course} />
+      <AdminSection />
       <Cards event={event} />
       <PlayDate />
     </>
