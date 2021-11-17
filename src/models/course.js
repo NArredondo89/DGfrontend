@@ -6,7 +6,7 @@ class CourseModel {
   }
 
   static edit(id) {
-    return fetch(`${url}/${id}`).then((response) => response.json());
+    return fetch(`${url}/course/${id}`).then((response) => response.json());
   }
 
   static update(id, data) {

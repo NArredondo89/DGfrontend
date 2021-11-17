@@ -2,6 +2,15 @@
   border: 1px solid black;
 }
 
+.hole__title__container {
+  background: #fff;
+  display: grid;
+  margin: 20px;
+  padding: 3vw;
+  align-items: center;
+  text-align: center;
+}
+
 .hole__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -24,7 +33,7 @@
 
 .hole__number {
   vertical-align: middle;
-  font-size: 5vw;
+  font-size: 3vw;
 }
 
 .hole__spec__container {
@@ -87,7 +96,7 @@
 }
 
 .hole_photo__container {
-  margin: 100px 0 0 0;
+  margin: 5vh 0 0 0;
   padding: 20px;
   display: grid;
   border: 1 px solid black;

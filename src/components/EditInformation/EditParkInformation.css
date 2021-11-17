@@ -1,0 +1,15 @@
+.edit__park__container {
+  display: grid;
+  box-sizing: border-box;
+}
+.edit__park__title {
+  display: grid;
+  justify-content: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3vw;
+  padding: 3vw;
+}

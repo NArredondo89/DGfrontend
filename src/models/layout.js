@@ -7,11 +7,11 @@ class LayoutModel {
   }
 
   static edit(id) {
-    return fetch(`${url}/${id}`).then((response) => response.json());
+    return fetch(`${url}/${id}/edit`).then((response) => response.json());
   }
 
-  static update(data, id) {
-    return fetch(`${url}/${id}`, {
+  static update(id, data) {
+    return fetch(`${url}/${id}/edit`, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {

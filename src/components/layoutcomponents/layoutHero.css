@@ -1,3 +1,12 @@
+.layout__title__container {
+  background: #fff;
+  display: grid;
+  /* margin: 20px; */
+  padding: 3vw;
+  align-items: center;
+  text-align: center;
+}
+
 .layout__container {
   height: 100vh;
   display: grid;

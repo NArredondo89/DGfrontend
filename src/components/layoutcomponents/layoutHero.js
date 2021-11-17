@@ -56,6 +56,9 @@ function LayoutHero({ layout, hole, onSpecificHoleClick }) {
 
   return (
     <>
+      <div className="layout__title__container">
+        <h1>Layout Information</h1>
+      </div>
       <div className="layout__container">
         <div className="layout__information__container">
           <div className="layout__title">{layout.title}</div>

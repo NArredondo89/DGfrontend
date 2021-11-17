@@ -1,13 +1,6 @@
 /* Always set the map height explicitly to define the size of the div
   * element that contains the map. */
 
-#GoogleMap {
-  height: 75vh;
-  border-radius: 10px;
-  width: 100%;
-  height: 0.75fr;
-}
-.google__maps__container {
-  display: grid;
-  align-items: center;
+#Google {
+  border-radius: 30px;
 }

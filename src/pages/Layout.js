@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import '../../App.css';
+import '../App.css';
 
 ////Containers//////
 
-import LayoutHero from '../layoutcomponents/layoutHero';
+import LayoutHero from '../components/layoutcomponents/layoutHero';
 // import HoleContainer from '../layoutcomponents/HoleContainer';
-import HoleDataSection from '../layoutcomponents/HoleData';
+import HoleDataSection from '../components/layoutcomponents/HoleData';
 
 /////Models//////
 import LayoutModel from '../models/layout';

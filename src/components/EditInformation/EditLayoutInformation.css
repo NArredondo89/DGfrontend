@@ -1,0 +1,14 @@
+.edit__layout__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.layout__title {
+  margin: 20px;
+  padding: 20px;
+
+  justify-content: center;
+  align-items: center;
+}

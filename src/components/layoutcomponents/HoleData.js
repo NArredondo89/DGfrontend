@@ -5,6 +5,9 @@ import './HoleData.css';
 function HoleDataSection({ hole, setNextHole, setPreviousHole }) {
   return (
     <>
+      <div className="hole__title__container">
+        <h1>Hole Information</h1>
+      </div>
       <div className="hole__container">
         <div className="hole__information__container">
           <div className="hole__info__container">

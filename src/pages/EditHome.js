@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
+
+/////Coure Model Imports///////
 import CourseModel from '../models/course';
 import LayoutModel from '../models/layout';
-import EditParkInformation from '../EditParkInformation';
-import EditLayoutInformation from '../EditLayoutInformation';
+import HoleModel from '../models/hole';
 
-// import EditHoleInformation from '../EditHoleInformation';
+///////Page Component Imports
+// import EditSideBar from '../EditInformation/EditSideBar';
+import EditParkInformation from '../components/EditInformation/EditParkInformation';
 
 function EditHome() {
   const [course, setCourse] = useState({});
   const [layout, setLayout] = useState({});
+  const [hole, setHole] = useState({});
 
   useEffect(function () {
     fetchCourse();
     fetchLayout();
+    fetchHole();
   }, []);
 
   const fetchCourse = () => {
@@ -27,10 +32,16 @@ function EditHome() {
     });
   };
 
+  const fetchHole = () => {
+    HoleModel.all().then((json) => {
+      setHole(json.hole);
+      console.log(json, 'Hole Model');
+    });
+  };
+
   return (
     <>
-      <EditParkInformation course={course} />
-      <EditLayoutInformation layout={layout} />
+      <EditParkInformation course={course} layout={layout} hole={hole} />
     </>
   );
 }

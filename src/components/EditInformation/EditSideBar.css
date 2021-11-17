@@ -1,0 +1,39 @@
+.edit__side__container {
+  height: 100%;
+  width: 20vw;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #ffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar {
+  width: 100%;
+}
+
+.sidebar__title__container {
+  padding: 20px;
+  margin: 20px;
+  display: grid;
+  text-align: center;
+  align-items: center;
+}
+
+.sidebar__contents {
+  display: flex;
+  padding: 2vh 2vw;
+  vertical-align: baseline;
+}
+
+.fas {
+  padding: 10px;
+}
+
+.sidebar__title {
+  display: flex;
+  margin: 12px 10px;
+}

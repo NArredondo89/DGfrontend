@@ -1,6 +1,13 @@
 * {
   box-sizing: border-box;
 }
+.park__title__container {
+  background: #fff;
+  display: grid;
+  padding: 3vw;
+  align-items: center;
+  text-align: center;
+}
 
 .CourseSection {
   padding: 10vh 0vw 8vh 5vw;
@@ -26,7 +33,7 @@ main {
 
 p {
   text-align: center;
-  padding: 5px;
+  padding: 15px;
   font-family: 'Montserrat', sans-serif;
 }
 

@@ -58,6 +58,11 @@
   height: 100%;
   text-align: center;
   justify-content: center;
+  color: #0d6efd;
+}
+
+.admin__name:hover {
+  color: #195e92;
 }
 
 .content__about__container {

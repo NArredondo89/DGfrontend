@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
-import CourseModel from './models/course';
+import CourseModel from '../../models/course';
+
+import './EditParkInformation.css';
 
 function EditParkInformation(props) {
   const [name, setName] = useState(props.course.name);
@@ -40,10 +42,12 @@ function EditParkInformation(props) {
 
   return (
     <>
-      <div className="container xl mt-5">
-        <form onSubmit={handleSubmit} className="row g-3">
-          <h1 className="parkInformations">Park Information</h1>
-          <div className="col-md-6">
+      <div className="edit__park__title">
+        <h1 className="layout__title">Park Information</h1>
+      </div>
+      <div className="edit__park__container">
+        <form onSubmit={handleSubmit} className="row">
+          <div className="form__information">
             <label for="parkName" className="parkName">
               Park Name
             </label>
@@ -55,7 +59,7 @@ function EditParkInformation(props) {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          <div className="col-md-6">
+          <div className="form__information">
             <label for="parkCity" className="parkCity">
               Park City
             </label>
@@ -68,7 +72,7 @@ function EditParkInformation(props) {
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="form__information">
             <label for="courseHoles" className="courseHoles">
               Holes :
             </label>
@@ -81,7 +85,7 @@ function EditParkInformation(props) {
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="form__information">
             <label for="availibility" className="availibility">
               Availibility :
             </label>
@@ -94,7 +98,7 @@ function EditParkInformation(props) {
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="form__information">
             <label for="tees" className="tees">
               Tees :
             </label>
@@ -107,7 +111,7 @@ function EditParkInformation(props) {
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="form__information">
             <label for="targets" className="targets">
               Targets :
             </label>
@@ -120,7 +124,7 @@ function EditParkInformation(props) {
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="form__information">
             <label for="property" className="property">
               Property :
             </label>
@@ -133,7 +137,7 @@ function EditParkInformation(props) {
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="form__information">
             <label for="services" id="services">
               Services :
             </label>
@@ -146,7 +150,7 @@ function EditParkInformation(props) {
             />
           </div>
 
-          <div className="col-md-6">
+          <div className="form__information">
             <label for="established" className="established">
               Established :
             </label>
@@ -159,8 +163,8 @@ function EditParkInformation(props) {
             />
           </div>
 
-          <div className="col-12">
-            <button type="submit" className="btn btn-primary">
+          <div className="form__button">
+            <button type="submit" className="update__course__button">
               Update Course Information
             </button>
           </div>

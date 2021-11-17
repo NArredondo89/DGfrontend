@@ -5,10 +5,12 @@ import ParkMap from './FrontPageMap';
 const CourseInformation = (props) => {
   return (
     <>
+      <div className="park__title__container">
+        <h1>Park Information</h1>
+      </div>
       <div className="CourseSection">
         <div className="CourseInformation">
           <main className="column">
-            <div className="infoTitle ">Information</div>
             <p>Holes : {props.course.holes}</p>
             <p>Avaliability: {props.course.availability}</p>
             <p>Tees : {props.course.tees}</p>
