@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import AuthModel from '../models/auth';
 
-export default function Register(props) {
+export default function Register() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

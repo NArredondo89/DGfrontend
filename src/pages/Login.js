@@ -1,14 +1,44 @@
 import React, { useState } from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 import '../App.css';
+
+import AuthModel from '../models/auth';
+import UserModel from '../models/user';
+
+import { userState } from '../recoil/atoms';
+import { useSetRecoilState } from 'recoil';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = () => {
-    console.log();
+  const setUser = useSetRecoilState(userState);
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const credientials = { email, password };
+
+    AuthModel.login(credientials).then((json) => {
+      console.log(json);
+
+      if (json.status === 400) {
+        setError(json.message);
+      }
+      if (json.status === 200) {
+        localStorage.setItem('uid', json.token);
+
+        UserModel.show().then((json) => {
+          console.log(json);
+          setUser(json.data);
+        });
+        navigate('/');
+      }
+    });
   };
 
   return (
