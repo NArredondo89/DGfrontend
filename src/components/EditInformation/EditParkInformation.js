@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import CourseModel from '../../models/course';
 
@@ -15,11 +16,10 @@ function EditParkInformation(props) {
   const [services, setServices] = useState(props.course.services);
   const [established, setEstablished] = useState(props.course.established);
 
-  console.log(props.course, 'editPark');
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
-
     CourseModel.update(props.course._id, {
       name,
       location,
@@ -35,8 +35,8 @@ function EditParkInformation(props) {
         console.log('still not right');
       }
       if (json.status === 200) {
-        console.log(json);
       }
+      navigate('/');
     });
   }
 

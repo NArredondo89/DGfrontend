@@ -5,10 +5,20 @@
   text-align: center;
 }
 
-.layout__title {
+.layout__edit__title {
   margin: 20px;
   padding: 20px;
 
   justify-content: center;
   align-items: center;
+}
+
+.edit__hole__wrapper {
+  display: inline-block;
+}
+
+.edit__hole__number {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
 }

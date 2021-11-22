@@ -1,7 +1,6 @@
 .layout__title__container {
   background: #fff;
   display: grid;
-  /* margin: 20px; */
   padding: 3vw;
   align-items: center;
   text-align: center;
@@ -25,10 +24,11 @@
 .layout__title {
   display: grid;
   width: 100%;
-  align-items: end;
+  align-items: center;
   font-size: 2rem;
-  margin: 0vh 0 3vh 0;
   text-align: center;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
 .layout__total__container {
@@ -61,6 +61,10 @@
 
 td {
   padding: 10px;
+}
+
+.title {
+  font-size: 10rem;
 }
 
 @media screen and (max-width: 1300px) {

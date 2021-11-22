@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import LayoutModel from '../../models/layout';
 
@@ -7,11 +8,14 @@ import './EditLayoutInformation.css';
 const EditLayoutInformation = (props) => {
   const layout = props.layout;
 
+  const hole = props.layout.hole;
+
   const [title, setTitle] = useState(layout.title);
   const [totalFeet, setTotalFeet] = useState(layout.totalFeet);
   const [totalHoles, setTotalHoles] = useState(layout.totalHoles);
   const [totalPar, setTotalPar] = useState(layout.totalPar);
 
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('clicked');
@@ -28,6 +32,7 @@ const EditLayoutInformation = (props) => {
       if (json.status === 200) {
         console.log(json);
       }
+      navigate('/');
     });
   };
 
@@ -88,11 +93,11 @@ const EditLayoutInformation = (props) => {
               onChange={(e) => setTotalPar(e.target.value)}
             />
           </div>
-          <div className="form__button">
-            <button type="submit" className="update__layout__button">
-              Update Information
-            </button>
-          </div>
+
+          <div className="form__button"></div>
+          <button type="submit" className="update__layout__button">
+            Update Information
+          </button>
         </form>
       </div>
     </>

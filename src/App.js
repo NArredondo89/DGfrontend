@@ -5,27 +5,29 @@ import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
 import Products from './pages/Products';
-import SignUp from './pages/SignUp';
+import Register from './pages/register';
+import Login from './pages/Login';
 import EditHome from './pages/EditHome';
 import EditLayout from './pages/EditLayout';
-// import EditSideBar from './components/EditInformation/EditSideBar';
+import EditHole from './pages/EditHole';
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        {/* <EditSideBar /> */}
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/layout" exact element={<Layout />} />
           <Route path="/layout/:id" exact element={<Layout />} />
 
           <Route path="/products" exact element={<Products />} />
-          <Route path="/sign-up" exact element={<SignUp />} />
+          <Route path="/register" exact element={<Register />} />
+          <Route path="/login" exact element={<Login />} />
 
           <Route path="/course/:id/" exact element={<EditHome />} />
           <Route path="/layout/:id/edit" exact element={<EditLayout />} />
+          <Route path="/hole" exact element={<EditHole />} />
         </Routes>
       </Router>
     </>

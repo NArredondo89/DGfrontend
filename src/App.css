@@ -43,3 +43,16 @@
   color: #fff;
   font-size: 100px;
 }
+
+.login__container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+  margin-left: 30vw;
+}
+
+.login__form {
+  width: 100%;
+}

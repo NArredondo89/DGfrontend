@@ -15,7 +15,7 @@ function HeroSection(props) {
           buttonStyle="btn--outline"
           buttonSize="btn--large"
         >
-          GET STARTED
+          Sign-Up
         </Button>
         <Button
           className="btns"
