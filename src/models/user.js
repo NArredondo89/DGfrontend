@@ -1,4 +1,4 @@
-const url = `https://chabotpark.herokuapp.com/`;
+const url = `https://chabotpark.herokuapp.com/api/v1/user`;
 
 class UserModel {
   static show() {

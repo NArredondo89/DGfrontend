@@ -1,4 +1,4 @@
-const url = `https://chabotpark.herokuapp.com/`;
+const url = `https://chabotpark.herokuapp.com/api/v1/reviews`;
 
 class ReviewModel {
   static show(data) {

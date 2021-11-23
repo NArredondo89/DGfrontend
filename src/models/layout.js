@@ -1,9 +1,9 @@
-const url = `https://chabotpark.herokuapp.com/`;
+const url = `https://chabotpark.herokuapp.com/api/v1/layout`;
 
 class LayoutModel {
   // show the layout //////
   static show() {
-    return fetch(`${url}/`).then((response) => response.json());
+    return fetch(`${url}`).then((response) => response.json());
   }
 
   static edit(id) {
