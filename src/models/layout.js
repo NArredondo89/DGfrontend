@@ -1,4 +1,4 @@
-const url = `https://chabotpark.herokuapp.com/api/v1/layout`;
+const url = 'https://chabotpark.herokuapp.com/api/v1/layout';
 
 class LayoutModel {
   // show the layout //////

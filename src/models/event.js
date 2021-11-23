@@ -1,4 +1,4 @@
-const url = `https://chabotpark.herokuapp.com/api/v1/event`;
+const url = 'https://chabotpark.herokuapp.com/api/v1/event';
 
 class EventModel {
   static show(data) {

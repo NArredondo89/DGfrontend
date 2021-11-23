@@ -1,4 +1,4 @@
-const url = `https://chabotpark.herokuapp.com/api/v1/hole`;
+const url = 'https://chabotpark.herokuapp.com/api/v1/hole';
 
 class HoleModel {
   static all() {
