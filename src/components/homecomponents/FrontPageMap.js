@@ -1,10 +1,12 @@
 import React from 'react';
+
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 import './FrontPageMap.css';
 
+require('dotenv').config();
 const ParkMap = () => {
-  const apiKey = `AIzaSyAq2oNSYgmd8vY7t3wMOHV9fJM9CDOIDRk`;
+  const apiKey = `APIKEY`;
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',

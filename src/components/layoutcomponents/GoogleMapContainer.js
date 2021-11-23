@@ -2,10 +2,12 @@ import React from 'react';
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import './GoogleMapContainer.css';
 
+require('dotenv').config();
+
 const GoogleMapsContainer = () => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyAq2oNSYgmd8vY7t3wMOHV9fJM9CDOIDRk',
+    googleMapsApiKey: 'APIKEY',
   });
 
   const containerStyle = {
