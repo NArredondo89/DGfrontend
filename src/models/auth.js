@@ -1,4 +1,4 @@
-const url = `http://localhost:4000/api/v1/auth`;
+const url = `https://chabotpark.herokuapp.com/`;
 
 class AuthModel {
   static register(data) {
