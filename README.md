@@ -54,40 +54,40 @@ View Trailer- This button will be linked to a trailer that will show a flying vi
 This section will be split into two sections. The left side section will display the course information (below) while the other side will display the google maps API of the course location. The map will be a high level overview of the location. 
 
 ## **Information**
-Course Name : Name 
-Course Condition : Good Condition, Moderate Condition, Bad Conditions 
-Park location: City 
-Holes: Number of holes at park
-Services: Dog Friendly, Cart Friendly, 
-Established: Year 
-Property : Type of park, Mixed Use
-Tee's: (Dirt, Cement, Gravel,) 
-Availability: Time frame in which the park is open 
-Targets: Types of Baskets. 
-Map View - Right Side
-Park Photo: Google Map API
+- Course Name : Name 
+- Course Condition : Good Condition, Moderate Condition, Bad Conditions 
+- Park location: City 
+- Holes: Number of holes at park
+- Services: Dog Friendly, Cart Friendly, 
+- Established: Year 
+- Property : Type of park, Mixed Use
+- Tee's: (Dirt, Cement, Gravel,) 
+- Availability: Time frame in which the park is open 
+- Targets: Types of Baskets. 
+- Map View - Right Side
+- Park Photo: Google Map API
 
 # Events And Announcements
 This section will allow the admin to display events and create announcements. Each event will have its own Section, the section on the homepage will be a call for action. If the user selects on the event it will pop up a modal that will display more information about that specific event. Since the events do not have sign ups they will not need any more functionality than a display feature. 
 
 ## **Modal Home**
--Photo - Hopefully a photo of people in prior events
--Event Title - Includes day (Saturday Weekly Tournament)
--Small Event Description - This will display a small sentence that provides a high level overview of the Event
--Event Highlight - This will display the type of event (Handicap Round, Doubles Best Throw, Raw Scores, Rated Round)
+- Photo - Hopefully a photo of people in prior events
+- Event Title - Includes day (Saturday Weekly Tournament)
+- Small Event Description - This will display a small sentence that provides a high level overview of the Event
+- Event Highlight - This will display the type of event (Handicap Round, Doubles Best Throw, Raw Scores, Rated Round)
 
 ## **Modal**
 Once the user clicks on the Event call to action it will display a more thorough events page that includes information:
 
 ## **Event Title** 
--Title 
--Contact - Admin Information if they would like it to be displayed
--Day of the Week: Day or Days 
--Start Format - Shotgun, Flex
--Start Time : Specific time 
--Play Format - Singles / Doubles 
--Members - Total Number of members 
--Admins - Names of Admins 
+- Title 
+- Contact - Admin Information if they would like it to be displayed
+- Day of the Week: Day or Days 
+- Start Format - Shotgun, Flex
+- Start Time : Specific time 
+- Play Format - Singles / Doubles 
+- Members - Total Number of members 
+- Admins - Names of Admins 
 
 # Park/Course Reviews
 This will allow members (not non-members) to comment and rate the specific course 
@@ -102,11 +102,11 @@ The layout page will be the most dynamic page of the entire website. I will cont
 ## Layout Information
 This section will be spit up into two sections. The first section will display the all the layout information and the second section will contain the Google Maps API 
 
--Layout
--Layout title 
--Total Par 
--Total Holes 
--Total Feet 
+- Layout
+- Layout title 
+- Total Par 
+- Total Holes 
+- Total Feet 
 
 *All Hole Details - with included details such as specific hole number, Par and Feet.  
 *The hole number will be be a link that will be linked to both the bottom hole information (bottom component) and the google maps API. When the user clicks on a specific hole it will rotate the map to show the specific hole on the google maps API and it will also render the specific hole data. 
@@ -124,69 +124,69 @@ Picture of the Hole from the Tee Pad to the basket ( if possible). On the pictur
 ### Hole Information Section
 The Hole information will display the in-depth data for that specific hole 
 
--Hole Number 
--Par Number 
--Feet Number 
--Mando's - This will display mandatory information based on layout requirements. 
--Out of Bounds - This will display out of bounds information based on layout requirements
--View Video - This video button will show a flying view of the specific hole. This will either render on top of the picture section or pull up a modal that will show a video. 
--Forehand Route Video- This video button will show Forehand throw which is a palms up throw 
--Backhand Route Video - This video button will show Backhand throw which is a palms down throw
+- Hole Number 
+- Par Number 
+- Feet Number 
+- Mando's - This will display mandatory information based on layout requirements. 
+- Out of Bounds - This will display out of bounds information based on layout requirements
+- View Video - This video button will show a flying view of the specific hole. This will either render on top of the picture section or pull up a modal that will show a video. 
+- Forehand Route Video- This video button will show Forehand throw which is a palms up throw 
+- Backhand Route Video - This video button will show Backhand throw which is a palms down throw
 
 
 # Admin Dashboard
 The admin dashboard will be the place where all information will be created, edited, updated or deleted. 
 
--Sidebar - This will have the various components Listed Below 
--Park Information - Edit / Update 
--Layout Information - Create / Edit / Update / Archive
--Event/ Announcement  Create / Edit / Update / Archive
--Handicap - This section is to help Admin's automate handicap rounds. This will take into consideration the first two establishing rounds. 
+- Sidebar - This will have the various components Listed Below 
+- Park Information - Edit / Update 
+- Layout Information - Create / Edit / Update / Archive
+- Event/ Announcement  Create / Edit / Update / Archive
+- Handicap - This section is to help Admin's automate handicap rounds. This will take into consideration the first two establishing rounds. 
 
 A player must play 6 tournaments in total before their handicap score is updated. Once they have played 6 tournaments the lowest score is dropped  and the remaining scores are used as a sum for their handicap score. This handicap score will be utilized with their raw scores to create the winners of the tournament. 
 
 ## **Park Information - Create, Update, Delete**
--Course Name 
--Course Condition
--Park location
--Holes
--Services
--Established
--Property 
--Tee's
--Availability
--Targets
+- Course Name 
+- Course Condition
+- Park location
+- Holes
+- Services
+- Established
+- Property 
+- Tee's
+- Availability
+- Targets
 
 ## **Layout Information - Create / Edit / Update / Archive**
--Layout title 
--Total Par 
--Total Holes 
--Total Feet 
+- Layout title 
+- Total Par 
+- Total Holes 
+- Total Feet 
 
 *All Hole Details - with included details such as specific hole number, Par and Feet.  
 
 ## **Event/ Announcement  Create / Edit / Update / Archive**
--Event Title 
--Contact 
--Day of the Week
--Start Format
--Start Time 
--Play Format
--Members
--Admins
--Handicap - Create, Edit, Archive - 2 Options 
+- Event Title 
+- Contact 
+- Day of the Week
+- Start Format
+- Start Time 
+- Play Format
+- Members
+- Admins
+- Handicap - Create, Edit, Archive - 2 Options 
 
 Create Fake API with Sample Data 
 or 
 Scrape The U-Disc Website and utilize their data.
 
 # Technologies
--Yarn
--Node.js
--Express
--MongoDB
--React.js
--Google-Maps-React
+- Yarn
+- Node.js
+- Express
+- MongoDB
+- React.js
+- Google-Maps-React
 
 **WireFrames**
 
